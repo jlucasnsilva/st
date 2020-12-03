@@ -6,14 +6,19 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+/* Spare fonts */
+static char *font2[] = {
+	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
+	/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+};
 static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
  * 2: scroll and/or utmp
- * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
+ * 3: SHELL environment variableTERM
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
@@ -215,6 +220,7 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ MODKEY,               XK_l,           copyurl,        {.i =  0} },
 };
 
 /*
