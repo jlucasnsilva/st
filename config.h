@@ -7,10 +7,10 @@
  * borderperc: percentage of cell width to use as a border
  *             0 = no border, 100 = border width is same as cell width
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
+	"Inconsolata for Powerline:pixelsize=14:antialias=true:autohint=true",
 	/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 static int borderperc = 20;
@@ -113,29 +113,34 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.9;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	[0] = "#fbf1c7", /* hard contrast: #f9f5d7 / soft contrast: #f2e5bc */
-	[1] = "#cc241d", /* red     */
-	[2] = "#98971a", /* green   */
-	[3] = "#d79921", /* yellow  */
-	[4] = "#458588", /* blue    */
-	[5] = "#b16286", /* magenta */
-	[6] = "#689d6a", /* cyan    */
-	[7] = "#7c6f64", /* white   */
+	"#3b4252", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#88c0d0", /* cyan    */
+	"#e5e9f0", /* white   */
 
 	/* 8 bright colors */
-	[8]  = "#928374", /* black   */
-	[9]  = "#9d0006", /* red     */
-	[10] = "#79740e", /* green   */
-	[11] = "#b57614", /* yellow  */
-	[12] = "#076678", /* blue    */
-	[13] = "#8f3f71", /* magenta */
-	[14] = "#427b58", /* cyan    */
-	[15] = "#3c3836", /* white   */
+	"#4c566a", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#8fbcbb", /* cyan    */
+	"#eceff4", /* white   */
+
+	[255] = 0,
+
+	"#2e3440", /* background */
+	"#d8dee9", /* foreground */
 };
 
 
@@ -143,10 +148,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-static unsigned int defaultcs = 15;
-static unsigned int defaultrcs = 257;
+unsigned int defaultfg = 257;
+unsigned int defaultbg = 256;
+static unsigned int defaultcs = 257;
+static unsigned int defaultrcs = 256;
 
 /*
  * Default shape of cursor
