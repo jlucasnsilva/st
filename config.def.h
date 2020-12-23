@@ -7,10 +7,11 @@
  * borderperc: percentage of cell width to use as a border
  *             0 = no border, 100 = border width is same as cell width
  */
-static char *font = "Liberation Mono:pixelsize=14:antialias=true:autohint=true";
+static char *font = "Ubuntu Mono:pixelsize=12:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
-	"Inconsolata for Powerline:pixelsize=14:antialias=true:autohint=true",
+    "Liberation Mono:pixelsize=12:antialias=true:autohint=true",
+	"Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true",
 	/*	"Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
 };
 static int borderperc = 20;
